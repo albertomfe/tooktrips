@@ -1,0 +1,71 @@
+<div class='base'>
+
+  <!-- Breadcrumb Begin -->
+   <div class="breadcrumb-section">
+     <div class="container">
+       <div class="row">
+         <div class="col-lg-12">
+           <div class="breadcrumb__option">
+             <a [href]="['./Home']"><i class="fa fa-home"></i> Home</a>&nbsp;
+             <span><i class='fa fa-envelope'></i> Registro</span>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+   <!-- Breadcrumb End -->
+
+
+
+  <!--=====================================
+    Register Content
+   ======================================-->
+      <div class='col-md-12 text-center mt-5'>
+        <h3 >Registrarme</h3>
+      </div>
+
+     <div class="container mt-5">
+      <div class="card">
+        <div class="card-body">
+
+          <div class="row ">
+            <div class="col-12 col-md-6 col-xs-6" [ngStyle]="{'background':'#3F3D56'}">
+              <div class="formContent">
+                <form id="loginForm" method="POST" action="/login/" novalidate="novalidate">
+                  <div class="form-group">
+                    <label for="username" class="control-label text-white">Nombre completo</label>
+                    <input type="text" class="form-control" id="c_nombre" name="c_nombre" value="" required="" title="Porfavor ingresa tu nombre" placeholder="">
+                    <span class="help-block"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="username" class="control-label text-white">Correo</label>
+                    <input type="text" class="form-control" id="c_usuario" name="c_usuario" value="" required="" title="Porfavor ingresa tu nombre de usuario" placeholder="ejemplo@gmail.com">
+                    <span class="help-block"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="password" class="control-label text-white">Contraseña</label>
+                    <input type="password" class="form-control" id="c_password" name="c_password" value="" required="" title="Porfavor ingresa tu contraseña">
+                    <span class="help-block"></span>
+                  </div>
+
+                  <button type="button" class="btn btn-login btn-block">Registrarme</button>
+                  <a [href]="['./Login']" class="btn btn-enlace btn-block blue-text">Inicio de Sesión</a>
+                </form>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-xs-6 fondo-ofertas">
+              <p class="lead">Registrate ahora <span class="text-success negritas">GRATIS</span></p>
+              <ul class="list-unstyled" style="line-height: 2">
+                <li><span class="fa fa-check text-success"></span> Reciba las ofertas del Momento</li>
+                <li><span class="fa fa-check text-success"></span> Guarda Tus Favoritos</li>
+                <li><span class="fa fa-check text-success"></span> Gestina tu Cuenta</li>
+                <li><span class="fa fa-check text-success"></span> Pago Rapido</li>
+                <li><span class="fa fa-check text-success"></span> Seguimiento personalizado </li>
+              </ul>
+            </div>
+          </div><!--row -->
+        </div><!--card body -->
+      </div><!-- card -->
+     </div><!-- Container -->
+
+</div>

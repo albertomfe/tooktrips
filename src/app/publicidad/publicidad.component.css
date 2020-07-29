@@ -1,0 +1,24 @@
+
+.seleccion_tipo
+{
+  height: 32px; 
+  font-weight:bold;
+  font-size: 18px;
+}
+
+.vigencia{
+  color:#222;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.imagen_publicidad{
+  height: 400px;
+  width: 100%;
+}
+
+.card
+{
+  background: #eee;
+  padding: 0px!important;
+}

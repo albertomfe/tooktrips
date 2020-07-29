@@ -1,0 +1,57 @@
+<div class='base' >
+  <!-- Breadcrumb Begin -->
+   <div class="breadcrumb-section">
+     <div class="container">
+       <div class="row">
+         <div class="col-lg-12">
+           <div class="breadcrumb__option">
+             <a [href]="['./Home']"><i class="fa fa-home"></i> Home</a>&nbsp;
+             <span><i class='fa fa-envelope'></i> Login</span>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+   <!-- Breadcrumb End -->
+
+
+   <!--=====================================
+    Login - Register Content
+    ======================================-->
+
+   <div class="container mt-5" >
+
+       <div class="row justify-content-md-center ">
+           <div class="col-12 col-md-6 col-xs-6 mt-5">
+               <div class="card">
+                 <div class="card-body " >
+                  <div class='col-md-12 mt-3'>
+                    <h4 class='text-white'>Inicio de Sesión</h4>
+                  </div>
+                   <div class="formContent">
+                       <form id="loginForm" method="POST" action="/login/" novalidate="novalidate">
+                         <div class="form-group">
+                           <label for="username" class="control-label text-white">Usuario</label>
+                           <input type="text" class="form-control" id="username" name="username" value="" required="" title="Porfavor ingresa tu nombre de usuario" placeholder="ejemplo@gmail.com">
+                           <span class="help-block"></span>
+                         </div>
+                         <div class="form-group">
+                           <label for="password" class="control-label text-white">Contraseña</label>
+                           <input type="password" class="form-control" id="password" name="password" value="" required="" title="Porfavor ingresa tu contraseña">
+                           <span class="help-block"></span>
+                         </div>
+
+                         <button type="button" class="btn btn-login btn-block">Ingresar</button>
+                         <a href="recovery" class="btn btn-enlace btn-block blue-text">Olvide mi Contraseña</a>
+                       </form>
+                     </div>
+
+
+                   </div><!-- card body-->
+               </div><!-- Card -->
+           </div><!-- Col 12 -->
+           <div class='col-md-6 image_seccion'></div>
+       </div><!--Row -->
+   </div><!--Container -->
+
+</div>

@@ -1,0 +1,67 @@
+<!-- Breadcrumb Begin -->
+ <div class="breadcrumb-section">
+   <div class="container">
+     <div class="row">
+       <div class="col-lg-12">
+         <div class="breadcrumb__option">
+           <a [href]="['./Home']"><i class="fa fa-home"></i> Home</a>&nbsp;
+           <span><i class='fa fa-certificate'></i> Promociones</span>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+ <!-- Breadcrumb End -->
+
+
+<div class='container'>
+  <div class='row'>
+    <div class='col-md-12 text-center mt-5'>
+      <h2>Publicidad</h2>
+    </div>
+
+    <div class='col-md-12 col-12' >
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01">Seleccione el Tipo de Publicidad</label>
+        </div>
+        <select (change)="filtar_publicidad()" [(ngModel)]="tipo" class="custom-select" id="inputGroupSelect01">
+          <option selected value="nacional">Nacional</option>
+          <option value="internacional">Internacional</option>
+          <option value="tours">Tours</option>
+          <option value="bodas">Boda</option>
+          <option value="bloqueos">Bloqueo</option>
+        </select>
+      </div>
+    </div>
+
+    <div *ngIf="tipo" class='col-12 text-center mb-3'><!-- si contiene tipo  param-->
+      <button type='button' (click)="anterior()" class='btn btn-primary'> << </button>&nbsp;&nbsp;
+      <span class="seleccion_tipo badge badge-primary">{{this.tipo}} Pag {{pagina_actual}}</span>&nbsp;&nbsp;
+      <button type='button' (click)="siguiente()" class='btn btn-primary'> >> </button>
+    </div>
+
+
+    <div class='row' *ngIf="!this.cargando">
+      <!-- Publicidad-->
+
+        <div class='col-12 col-md-4 mb-3 ' *ngFor="let item of publicidad">
+            <div class="card">
+              <div class="card-body">
+                <div class="col-12">
+                  <img class='imagen_publicidad' [src]="'https://imacoponline.com/1-sistema/'+item['RUTA']"   ><!-- './assets/no-disponible.png'    " -->
+                </div>
+                <div class='col-md-12 text-center'>
+                  <span class="vigencia">Vigencia {{item['FECHA_VIGENCIA']}}</span>
+                </div>
+              </div>
+            </div><!-- CARD -->
+        </div> <!-- COL SM  -->
+
+    </div>
+
+
+
+  </div>
+</div>

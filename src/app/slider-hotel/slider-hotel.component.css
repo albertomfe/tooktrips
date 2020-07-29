@@ -1,0 +1,25 @@
+
+
+.mb-5{
+	margin-bottom:50px;
+}
+
+
+
+.carousel-indicators {
+	left: 0;
+	top: auto;
+  bottom: -60px;
+}
+
+.carousel-indicators li {
+    background-color: #E18229!important;
+    width: 20px;
+    height: 20px;
+}
+
+.img_htl:hover{
+	animation-name: swing;
+	transform-origin: center;
+	animation-duration: 1s;
+}

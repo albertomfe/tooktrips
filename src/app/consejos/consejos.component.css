@@ -1,0 +1,13 @@
+.negritas{
+  font-weight: bold!important;
+}
+.fuente_grande{
+  font-size:18px!important;
+}
+.fuente_chica{
+  font-size:16px!important;
+}
+
+.borde_principal{
+  border-bottom: 3px solid #227064;
+}

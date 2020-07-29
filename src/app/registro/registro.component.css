@@ -1,0 +1,40 @@
+.base{
+	background: #f1f1f1;
+	min-height: 100vh;
+}
+
+.card{
+	border-radius: 5px;
+	background: #fff;
+}
+
+.lead{
+	font-weight: bold;
+	color:#242424;
+}
+
+.negritas{
+	font-weight: bold;
+}
+
+h4{
+	color:#535353;
+}
+.fondo-ofertas{
+	background: url(/assets/fondo/registro.svg);
+	background-size: cover;
+}
+.card-body{
+	padding:0px;
+	padding-right:15px;
+	padding-left:15px;
+}
+.formContent{
+	padding-left:15px;
+	padding-top:25px;
+}
+
+.btn-login{
+	background: #E18229;
+	font-weight: bold;
+}
