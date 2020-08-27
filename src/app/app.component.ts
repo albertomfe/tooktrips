@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PeticionesService } from './peticiones.service';
 
 declare var jQuery:any;
 declare var $:any;
@@ -6,14 +7,29 @@ declare var $:any;
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers:[PeticionesService]
 })
 export class AppComponent implements OnInit{
   title = 'TookTrips';
 
+  public ventana: any;
+  public acceso:boolean;
+  public result:any;
+  public msg_error:string;
+
+  constructor(
+    private _peticionesService:PeticionesService
+  )
+  {
+    this.acceso=false;
+  }
+
 
   ngOnInit()
   {
+    this.acceso=false;
+    this.ventana=window;
     (function($)
     {
         "use strict";
@@ -96,10 +112,69 @@ export class AppComponent implements OnInit{
             scrollSpeed: 1000
         });*/
 
+        /*evitar dezplazxamoiento ala derecha*/
+        /* this.ventana.onscroll = function () {
+           this.ventana.scrollLeft(0,0);
+         }*/
+
     })(jQuery);
 
 
-  }
+    //ejecutar la validacion
+    this.validar_token();
+  }//oninit
+
+
+
+
+    validar_token()
+    {
+      this.acceso=false;
+
+      if(typeof(Storage)!=="undefined")
+      {
+        //console.log(localStorage.getItem("usuario"));
+        if(localStorage.getItem("token"))
+        {
+          var KeyToken=JSON.parse(localStorage.getItem("token"));
+
+            //console.log(usr_json.mail);
+            if(KeyToken!="")
+            {    //console.log(KeyToken);
+              this.acceso=true;
+            }//validar mail vacio
+          }//localstorage validacion
+        }//validar que permita el localstorage
+    }
+
+
+    cerrar_session()
+    {
+        if(typeof(Storage)!=="undefined")
+        {
+          //console.log(localStorage.getItem("usuario"));
+          if(localStorage.getItem("token"))
+          {
+            var KeyToken=JSON.parse(localStorage.getItem("token"));
+            //console.log(' Cerrar session '+KeyToken);
+            //request
+            this._peticionesService.CloseSession(KeyToken).subscribe(
+              resultado=>{
+                this.result=resultado||[];
+                //console.log(this.result);
+                 this.acceso=true;
+                 localStorage.removeItem("token");//eliminar variable localstorage
+                 window.location.href='./Login';
+              },
+              error=>{
+
+              }
+            );
+          }
+
+        }
+    }
+
 
 
 }

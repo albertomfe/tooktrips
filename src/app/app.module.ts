@@ -18,6 +18,9 @@ import { ConsejosComponent } from './consejos/consejos.component';
 import { PublicidadComponent } from './publicidad/publicidad.component';
 import { SliderHotelComponent } from './slider-hotel/slider-hotel.component';
 import { CatalogoHotelesComponent } from './catalogo-hoteles/catalogo-hoteles.component';
+import { FooterComponent } from './footer/footer.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 
@@ -35,7 +38,8 @@ import { CatalogoHotelesComponent } from './catalogo-hoteles/catalogo-hoteles.co
     ConsejosComponent,
     PublicidadComponent,
     SliderHotelComponent,
-    CatalogoHotelesComponent
+    CatalogoHotelesComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +49,7 @@ import { CatalogoHotelesComponent } from './catalogo-hoteles/catalogo-hoteles.co
     SafePipeModule,
     // import HttpClientModule after BrowserModule.
     HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [],
   bootstrap: [AppComponent]

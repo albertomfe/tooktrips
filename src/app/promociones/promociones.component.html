@@ -1,0 +1,45 @@
+<!-- Breadcrumb Begin -->
+ <div class="breadcrumb-section">
+   <div class="container">
+     <div class="row">
+       <div class="col-lg-12">
+         <div class="breadcrumb__option">
+           <a [href]="['./Home']"><i class="fa fa-home"></i> Home</a>&nbsp;
+           <span><i class='fa fa-certificate'></i> Promociones</span>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+ <!-- Breadcrumb End -->
+
+
+<div class='container'>
+  <div class='row'>
+    <div class='col-md-12 text-center mt-5'>
+      <h2>Promociones</h2>
+    </div>
+
+
+
+    <div class='col-md-12  mt-5'>
+      <div class='row' *ngIf="!this.cargando">
+        <!-- Promociones-->
+
+          <div class='col-12 col-md-4 mb-3 ' *ngFor="let item of promociones">
+              <div class="card">
+                <div class="card-body">
+                    <img class='imagen_promocion' [src]="item['image']"   ><!-- './assets/no-disponible.png'    " -->
+
+                    <span class="vigencia"></span>
+
+                </div>
+              </div><!-- CARD -->
+          </div> <!-- COL SM  -->
+
+      </div>
+   </div>
+
+
+  </div>
+</div>

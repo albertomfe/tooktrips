@@ -17,23 +17,26 @@ export class PeticionesService{
     public _http:HttpClient
   )
   {
-    this.url="https://reqres.in";
+    this.url="";
   }
 
-
-   getPublicidad(tipo):Observable<any>{
+   //autentificacion
+   getPromociones(token):Observable<any>{
 
      //Establecemos cabeceras
-      let headers = { "Accept": "application/json" };
+     let headers = {
+       "Accept": "application/json",
+       "Content-Type":"application/json",
+       "SPTOKEN":token
+     };
+      console.log(token);
 
-      let parametros=new FormData();
-      parametros.append('user', 'Imacop');
-      parametros.append('password', '25041988');
-      parametros.append('officeId','1');
-      parametros.append('typePublicity', ''+tipo+'');
+      var param='';
 
-      this.url="https://sistema.imacoponline.com/API/ApiPublicidad";
-      return this._http.post(this.url,parametros,{headers:headers});
+      this.url="https://service-place-api.azurewebsites.net/promotion/available/";
+      return this._http.get(this.url,{headers:headers});
    }
-   
+
+
+
 }

@@ -11,9 +11,9 @@ import { PeticionesService } from './peticiones.service';
 })
 export class PromocionesComponent implements OnInit {
 
-  public tipo:string;
-  public publicidad:[];
-  private cargando:boolean;
+
+  public promociones:[];
+  public cargando:boolean;
 
     constructor(
       private _route: ActivatedRoute,
@@ -21,38 +21,44 @@ export class PromocionesComponent implements OnInit {
       private _peticionesService:PeticionesService
     )
     {
-      this.tipo="nacional";
       this.cargando=true;
     }
 
     ngOnInit(): void {
-      //this.filtar_publicidad();
+      this.obtener_promociones();
     }
 
-    filtar_publicidad()
+    obtener_promociones()
     {
-      this.tipo=this.tipo||"nacional";
+        this.cargando=true;
+      if(typeof(Storage)!=="undefined")
+      {
+        //console.log(localStorage.getItem("usuario"));
+        if(localStorage.getItem("token"))
+        {
+          var KeyToken=JSON.parse(localStorage.getItem("token"));
+          //console.log(KeyToken);
 
-      //console.log('filtar publicidad = '+this.tipo);
-      //this._router.navigate(['./Publicidad/'+this.tipo]);
-      this.cargando=true;
+            this._peticionesService.getPromociones(KeyToken).subscribe(
+              resultado=>{
 
-      //request
-      this._peticionesService.getPublicidad(this.tipo).subscribe(
-        resultado=>{
+                //Efecto de Carga
+                setTimeout(() => {
+                  this.cargando=false;
+                }, 1000);
 
-          //Efecto de Carga
-          /*setTimeout(() => {
-            this.cargando=false;
-          }, 1000);*/
+                //this.promociones=resultado||[];
+                this.promociones=resultado['ResponseEnablePromotion.item']['promotions']['promotions']||[];
+                console.log(this.promociones);
 
-          this.publicidad=resultado||[];
+              },
+              error=>{
+                //console.log(<any>error);
+              }
+            );
+          }//localstorage validacion
+        }//validar que permita el localstorage
 
-        },
-        error=>{
-          //console.log(<any>error);
-        }
-      );
     }//metodo listar
 
 }

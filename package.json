@@ -1,9 +1,9 @@
 {
-  "name": "travel-buyer",
+  "name": "TookTrips",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve ",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -19,10 +19,11 @@
     "@angular/platform-browser": "~9.1.11",
     "@angular/platform-browser-dynamic": "~9.1.11",
     "@angular/router": "~9.1.11",
+    "@angular/service-worker": "~9.1.11",
     "@types/jquery": "^3.5.0",
     "jquery": "^3.5.1",
     "rxjs": "~6.5.4",
-    "rxjs-compat": "^6.6.0",
+    "rxjs-compat": "^6.6.2",
     "safe-pipe": "^1.0.3",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

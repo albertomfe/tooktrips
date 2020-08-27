@@ -31,26 +31,80 @@
           <div class="row ">
             <div class="col-12 col-md-6 col-xs-6" [ngStyle]="{'background':'#3F3D56'}">
               <div class="formContent">
-                <form id="loginForm" method="POST" action="/login/" novalidate="novalidate">
+
                   <div class="form-group">
-                    <label for="username" class="control-label text-white">Nombre completo</label>
-                    <input type="text" class="form-control" id="c_nombre" name="c_nombre" value="" required="" title="Porfavor ingresa tu nombre" placeholder="">
-                    <span class="help-block"></span>
-                  </div>
-                  <div class="form-group">
-                    <label for="username" class="control-label text-white">Correo</label>
-                    <input type="text" class="form-control" id="c_usuario" name="c_usuario" value="" required="" title="Porfavor ingresa tu nombre de usuario" placeholder="ejemplo@gmail.com">
-                    <span class="help-block"></span>
-                  </div>
-                  <div class="form-group">
-                    <label for="password" class="control-label text-white">Contraseña</label>
-                    <input type="password" class="form-control" id="c_password" name="c_password" value="" required="" title="Porfavor ingresa tu contraseña">
+                    <label for="username" class="control-label text-white">Primer Nombre</label>
+                    <input type="text" class="form-control"  [(ngModel)]="firstName" value=""  placeholder="">
                     <span class="help-block"></span>
                   </div>
 
-                  <button type="button" class="btn btn-login btn-block">Registrarme</button>
+                  <div class="form-group">
+                    <label for="username" class="control-label text-white">Segundo Nombre</label>
+                    <input type="text" class="form-control"  [(ngModel)]="lastName" value=""  placeholder="">
+                    <span class="help-block"></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="username" class="control-label text-white">Genero</label>
+                    <select class="form-control"  [(ngModel)]="gender">
+                      <option value='1' >Masculino</option>
+                      <option value='2' >Femenino</option>
+                    </select>
+                    <span class="help-block"></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="username" class="control-label text-white">Edad</label>
+                    <input type="number" class="form-control" [(ngModel)]="yearOld" value=""  placeholder="">
+                    <span class="help-block"></span>
+                  </div>
+
+
+                  <div class="form-group">
+                    <label for="username" class="control-label text-white">Pais</label>
+                    <input type="text" class="form-control" [(ngModel)]="country" value=""  placeholder="">
+                    <span class="help-block"></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="username" class="control-label text-white">Ciudad</label>
+                    <input type="text" class="form-control" [(ngModel)]="city" value=""  placeholder="">
+                    <span class="help-block"></span>
+                  </div>
+
+
+                  <div class="form-group">
+                    <label for="username" class="control-label text-white">Direccion</label>
+                    <textarea type="text" class="form-control" [(ngModel)]="address"   placeholder=""></textarea>
+                    <span class="help-block"></span>
+                  </div>
+
+
+
+                  <div class="form-group">
+                    <label for="username" class="control-label text-white">Nombre de Usuario</label>
+                    <input type="text" class="form-control" [(ngModel)]="nickname" value=""  placeholder="ejemplo@gmail.com">
+                    <span class="help-block"></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="password" class="control-label text-white">Contraseña</label>
+                    <input type="password" class="form-control" [(ngModel)]="password" value=""  >
+                    <span class="help-block"></span>
+                  </div>
+
+
+                  <button type="button" (click)="Registrar()" class="btn btn-login btn-block">Registrarme</button>
+                  <br />
+                  <div *ngIf="msg_error!=''" class="alert alert-danger" role="alert">
+                    <strong>Error!</strong> {{msg_error}}
+                  </div>
+                  <div *ngIf="msg_success!=''" class="alert alert-success" role="alert">
+                    <strong>Correcto!</strong> {{msg_success}}
+                  </div>
+
                   <a [href]="['./Login']" class="btn btn-enlace btn-block blue-text">Inicio de Sesión</a>
-                </form>
+
               </div>
             </div>
             <div class="col-12 col-md-6 col-xs-6 fondo-ofertas">

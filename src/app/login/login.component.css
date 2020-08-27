@@ -1,7 +1,7 @@
 
 .base{
-	background: #f1f1f1;
-	min-height: 100vh;
+	/*background: #f1f1f1;*/
+	/*	min-height: 100vh;*/
 }
 
 h4{
@@ -41,4 +41,16 @@ h4{
 	height: 400px;
 	background: url(/assets/fondo/login.svg);
 	background-size: cover;
+}
+
+.image_acceso
+{
+	height: 400px;
+	background: url(/assets/fondo/acceso_permitido.svg);
+	background-size: cover;
+}
+
+.img-logo-welcome{
+	height: 250px;
+	width: 250px;
 }
