@@ -1,0 +1,56 @@
+
+.base{
+	/*background: #f1f1f1;*/
+	/*	min-height: 100vh;*/
+}
+
+h4{
+	color:#535353;
+}
+.fondo-ofertas{
+	background:#eee;
+	widht:50%!important;
+}
+
+.card{
+	border-radius: 5px;
+	background: #3F3D56;
+}
+
+.card-body{
+	padding:0px;
+	padding-right:15px;
+	padding-left:15px;
+}
+.formContent{
+	padding-left:15px;
+	padding-top:25px;
+}
+
+.btn-login{
+	background: #E18229;
+	font-weight: bold;
+}
+
+.mt-3{
+	margin-top:30px;
+}
+
+.image_seccion
+{
+	height: 400px;
+	background: url(/assets/fondo/recovery.svg);
+	background-size: cover;
+}
+
+.image_acceso
+{
+	height: 400px;
+	background: url(/assets/fondo/acceso_permitido.svg);
+	background-size: cover;
+}
+
+.img-logo-welcome{
+	height: 250px;
+	width: 250px;
+}

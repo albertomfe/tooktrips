@@ -21,6 +21,7 @@ import { CatalogoHotelesComponent } from './catalogo-hoteles/catalogo-hoteles.co
 import { FooterComponent } from './footer/footer.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { RecoveryComponent } from './recovery/recovery.component';
 
 
 
@@ -39,7 +40,8 @@ import { environment } from '../environments/environment';
     PublicidadComponent,
     SliderHotelComponent,
     CatalogoHotelesComponent,
-    FooterComponent
+    FooterComponent,
+    RecoveryComponent
   ],
   imports: [
     BrowserModule,

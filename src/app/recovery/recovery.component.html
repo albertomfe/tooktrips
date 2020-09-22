@@ -1,0 +1,87 @@
+<div class='base' >
+
+  <!-- Breadcrumb Begin -->
+   <div class="breadcrumb-section">
+     <div class="container">
+       <div class="row">
+         <div class="col-lg-12">
+           <div class="breadcrumb__option">
+             <a [href]="['./Home']"><i class="fa fa-home"></i> Home</a>&nbsp;
+             <span><i class='fa fa-envelope'></i> Recovery</span>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+   <!-- Breadcrumb End -->
+
+
+   <!--=====================================
+    Login - Register Content
+    ======================================-->
+
+   <div class="container mt-5" >
+
+       <div *ngIf="!acceso" class="row justify-content-md-center ">
+           <div class="col-12 col-md-6 col-xs-6 mt-5">
+               <div class="card">
+                 <div class="card-body " >
+                  <div class='col-md-12 mt-3'>
+                    <h4 class='text-white'>Olvide mi Contraseña</h4>
+                  </div>
+                   <div class="formContent">
+                       <form id="loginForm" method="POST" action="/login/" novalidate="novalidate">
+                         <div class="form-group">
+                           <label for="username" class="control-label text-white">Escribe tu Email</label>
+                           <input type="text" class="form-control"
+                           type="email"
+                           [(ngModel)]="email"
+                           name="email"
+                            required="" title="Porfavor ingresa tu nombre de usuario" placeholder="">
+                           <span class="help-block"></span>
+                         </div>
+
+                         <button type="button" (click)="recobrar()" class="btn btn-login btn-block">Restaurar Password</button>
+                         <a href="Login" class="btn btn-enlace btn-block blue-text">Login</a>
+                       </form>
+                       <div *ngIf="cargando > 0" class='col-md-12 d-flex flex-justify-center text-center'>
+                          <div data-role="activity" data-type="square" data-style="color"></div>
+                        </div>
+                     </div>
+
+                      <div *ngIf="msg_error!=''" class="alert alert-danger" role="alert">
+                        <strong>Error!</strong> {{msg_error}}
+                      </div>
+
+
+                   </div><!-- card body-->
+               </div><!-- Card -->
+           </div><!-- Col 12 -->
+           <div class='col-md-6 image_seccion'></div>
+       </div><!--Row -->
+
+
+       <div *ngIf="acceso" class="row justify-content-md-center ">
+           <div class="col-12 col-md-6 col-xs-6 mt-5">
+               <div class="card">
+                 <div class="card-body " >
+                  <div class='col-md-12 mt-3 text-center'>
+                    <h1 class='text-white'>Bienvenido</h1>
+                  </div>
+                     <div class="formContent text-center">
+                      <img src="./assets/img/logo.png" class="img-fluid img-logo-welcome"  alt="Responsive image">
+                     </div>
+
+                   </div><!-- card body-->
+               </div><!-- Card -->
+           </div><!-- Col 12 -->
+           <div class='col-md-6 image_acceso'></div>
+       </div><!--Row -->
+
+
+
+
+
+   </div><!--Container -->
+
+</div>

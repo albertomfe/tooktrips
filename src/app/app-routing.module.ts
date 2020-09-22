@@ -10,6 +10,7 @@ import { PromocionesComponent } from './promociones/promociones.component';
 import { ConsejosComponent } from './consejos/consejos.component';
 import { PublicidadComponent } from './publicidad/publicidad.component';
 import { NofoundComponent } from './nofound/nofound.component';
+import { RecoveryComponent } from './recovery/recovery.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path:'Promociones',component:PromocionesComponent},
   {path:'Publicidad',component:PublicidadComponent},
   {path:'Consejos',component:ConsejosComponent},
+  {path:'recovery',component:RecoveryComponent},
   {path: '**', component: NofoundComponent }
 ];
 
