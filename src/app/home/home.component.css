@@ -87,3 +87,21 @@
 {
   margin-bottom: 80px;
 }
+
+i .fab{
+  color:#fff!important;
+}
+
+.top-navbar > a > i{
+  color:#fff!important;
+}
+
+.hmotor{
+  min-height: 500px;
+}
+
+@media screen and (max-width: 600px) {
+  .hmotor{
+    min-height: 700px;
+  }
+}

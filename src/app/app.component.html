@@ -28,19 +28,19 @@
   <!-- As a heading -->
    <nav class="navbar navbar-light bg-warning">
      <div class='top-navbar'>
-       <a  target='_blank' href="https://www.facebook.com/TookTrips-105183041294175/" target="_blank"><i class="fab fa-facebook-f mr-4"></i></a>
-       <a  target='_blank' href="#" target="_blank"><i class="fab fa-instagram mr-4"></i></a>
-       <a  target='_blank' href="https://api.whatsapp.com/send?phone=523321365487" target="_blank"><i class="fab fa-whatsapp mr-4"></i></a>
-       <a  target='_blank' href="mailto:operaciones@tooktrips.com?subject=Cotizaci%C3%B3n&body=Gracias%20por%20comunicarte%20con%20TooksTrips%2C%20En%20que%20podemos%20ayudarte%3F" target="_blank"><i class="fas fa-envelope mr-4"></i></a>
+       <a  target='_blank' href="https://www.facebook.com/TookTrips-105183041294175/" target="_blank"><i class="fab fa-facebook-f mr-4" style='color:#fff;'></i></a>
+       <a  target='_blank' href="#" target="_blank"><i class="fab fa-instagram mr-4" style='color:#fff;'></i></a>
+       <a  target='_blank' href="https://api.whatsapp.com/send?phone=523321365487" target="_blank"><i class="fab fa-whatsapp mr-4" style='color:#fff;'></i></a>
+       <a  target='_blank' href="mailto:operaciones@tooktrips.com?subject=Cotizaci%C3%B3n&body=Gracias%20por%20comunicarte%20con%20TooksTrips%2C%20En%20que%20podemos%20ayudarte%3F" target="_blank"><i class="fas fa-envelope mr-4" style='color:#fff;'></i></a>
        <div class='float-right'>
-         <i class="icon-telephone"></i> Tel. Servicio: 33-21-33-51-13
+         <i class="icon-telephone"></i> Tel. Servicio: 33-22-75-27-42
        </div>
      </div>
      <div class="navbar-brand" >
        <div class='logo'>
         <a href='./Home' ><img src="./assets/img/logo_nav.png" class="img-fluid" alt="Responsive image"></a>
        </div>
-       <div *ngIf="!acceso" class="menu__toggle" >
+       <!--<div *ngIf="!acceso" class="menu__toggle" >
          &nbsp;
          <a class='btn-transparent'><i class="icon-user tam26 "></i></a>&nbsp;&nbsp;&nbsp;
          <a class='btn-transparent'><i class="icon-register tam26 "></i></a>
@@ -48,8 +48,8 @@
            <a [href]="['./Login']"  class='actions_users'>Login</a> |
            <a [href]="['./Registro']" class='actions_users' >Registro</a>
          </div>
-       </div>
-       <div *ngIf="acceso" class="menu__toggle" >
+       </div>-->
+       <!--<div *ngIf="acceso" class="menu__toggle" >
          &nbsp;
          <a class='btn-transparent'>&nbsp;&nbsp;&nbsp;&nbsp;<i class="icon-user tam26 "></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
          <a class='btn-transparent'><i class="fas fa-cogs tam26 "></i></a>
@@ -57,20 +57,20 @@
            <a (click)="cerrar_session()" class='actions_users'>Cerrar Sesión</a> |
            <a [href]="['./Config']" class='actions_users' >Configuración</a>
          </div>
-       </div>
+       </div>-->
      </div>
      <ul class="nav">
         <li class="nav-item">
-          <a class="nav-link menu_link" href="#">Home</a>
+          <a class="nav-link menu_link" href="./Home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link menu_link" href="#">Promociones</a>
+          <a class="nav-link menu_link" href="./Promociones">Promociones</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link menu_link" href="#">Publicidad</a>
+          <a class="nav-link menu_link" href="./Publicidad">Publicidad</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link menu_link" href="#">Consejos</a>
+          <a class="nav-link menu_link" href="./Consejos">Consejos</a>
         </li>
       </ul>
     </nav>

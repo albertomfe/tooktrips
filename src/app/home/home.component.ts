@@ -15,7 +15,21 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
 
-    
+    (function(doc, script) {
+        var js,
+            fjs = doc.getElementsByTagName(script)[0],
+            add = function(url, id) {
+                if (doc.getElementById(id)) {
+                    return;
+                }
+                js = doc.createElement(script);
+                js.src = url;
+                js.async;
+                id && (js.id = id);
+                fjs.parentNode.insertBefore(js, fjs);
+            };
+        add('https://reservas.tooktrips.com/widget/engine?lang=es&target=.miClase', 'js-xpc-widget');
+    }(document, 'script'));
 
   }
 

@@ -53,7 +53,7 @@ export class PeticionesService{
           }
       }
       `;
-      console.log(param);
+      console.log('dentro del servicio ',param);
 
       this.url="https://service-place-api.azurewebsites.net/user/";
       return this._http.post(this.url,param,{headers:headers});

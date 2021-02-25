@@ -56,7 +56,7 @@ export class RegistroComponent implements OnInit {
           resultado=>{
 
             this.result=resultado||[];
-            console.log(this.result);
+            console.log('correcto',this.result);
             this.cargando=0;
             this.msg_success=' Tu registro se ha creado correctamente ';
           },

@@ -4,6 +4,7 @@
   height: 80px;
   background: #B01313;
   clip-path: polygon(50% 25%, 0% 100%, 100% 100%);
+  margin-bottom: -20px;
 }
 
 /*footer*/

@@ -15,11 +15,11 @@
 .menu_link{
   font-weight: 300;
   line-height: 3.5;
-  color: #fff;
+  color: #fff!important;
 }
 .menu_link:hover{
   font-weight: 300;
   line-height: 3.5;
   background: #874E19!important;
-  color: #fff;
+  color: #fff!important;
 }
